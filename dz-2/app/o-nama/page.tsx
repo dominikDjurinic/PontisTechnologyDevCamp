@@ -1,15 +1,16 @@
-type TextDivType = {
+type TextStyle = {
   color: string;
   text: string;
 };
 
-function Odjeljak({ color, text }: TextDivType) {
+// Kartice za tekstualne dijelove
+function TextCard({ color, text }: TextStyle) {
   return <div className={`w-[90%] ${color} p-5 rounded-2xl`}>{text}</div>;
 }
 
 // O nama stranica na ruti /o-nama
 export default function Onama() {
-  const stories: TextDivType[] = [
+  const about_stories: TextStyle[] = [
     {
       color: "bg-red-200",
       text: "Pontis Technology je hrvatska tvrtka za IT usluge s uredima u Hrvatskoj,Njemačkoj i Bosni i Hercegovini. Pontis Technology je tvrtka u vlasništvu Ponteve. Ponteva je članica Bridgewest Grupe, globalne privatne investicijske tvrtke.",
@@ -27,9 +28,9 @@ export default function Onama() {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-5">
       <h2 className="text-2xl font-bold my-5">O nama</h2>
-      {stories.map((story) => {
+      {about_stories.map((story) => {
         return (
-          <Odjeljak key={story.color} color={story.color} text={story.text} />
+          <TextCard key={story.color} color={story.color} text={story.text} />
         );
       })}
     </div>

@@ -11,6 +11,7 @@ export default function NotFound() {
         alt="notfound-icon"
         width={200}
         height={200}
+        loading="eager"
       />
     </div>
   );

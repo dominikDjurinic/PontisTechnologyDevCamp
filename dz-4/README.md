@@ -29,7 +29,7 @@ Zadatak je bio izraditi CLI JavaScript skriptu koja asinkrono čita 3 tekstualne
 
 WORD COUNTER LIST
 
----
+$---------------$
 
 third.txt (broj rijeci): 7
 

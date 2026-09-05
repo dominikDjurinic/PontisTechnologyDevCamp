@@ -12,18 +12,24 @@ Zadatak je bio izraditi CLI JavaScript skriptu koja asinkrono čita 3 tekstualne
 
 1. Preuzmite mapu `dz-4`
 2. Otvorite terminal i pozicionirajte se u preuzetoj mapi
-   
+
    ```bash
    cd dz-4
    ```
-3. Pokrenite skriptu `wordCounter.js` pomoću naredbe `node` i kao argumente predajte 3 `.txt` datoteke*
-   
+
+3. Pokrenite skriptu `wordCounter.js` pomoću naredbe `node` i kao argumente predajte 3 `.txt` datoteke\*
+
    ```bash
     node wordCounter.js first.txt second.txt third.txt
    ```
+
    (\* U mapi se nalaze defaultne datoteke first.txt, second.txt i third.txt koje se pozivaju ako nisu navedene druge datoteke.)
 
 ## Primjer ispisa
+
+WORD COUNTER LIST
+
+---
 
 third.txt (broj rijeci): 7
 

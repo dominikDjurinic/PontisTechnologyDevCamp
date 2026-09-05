@@ -46,6 +46,9 @@ async function wordCounter() {
 
   wordCounters.sort((a, b) => b.count - a.count); // desc sortiranje
 
+  console.log("WORD COUNTER LIST");
+  console.log("-------------------------------");
+
   for (const counter of wordCounters) {
     console.log(counter.fileName + " (broj rijeci): " + counter.count);
   }

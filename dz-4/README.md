@@ -27,12 +27,10 @@ Zadatak je bio izraditi CLI JavaScript skriptu koja asinkrono čita 3 tekstualne
 
 ## Primjer ispisa
 
+```bash
 WORD COUNTER LIST
-
-$---------------$
-
+-------------------------------
 third.txt (broj rijeci): 7
-
 first.txt (broj rijeci): 6
-
 second.txt (broj rijeci): 4
+```

@@ -10,12 +10,14 @@ Zadatak je bio izraditi CLI JavaScript skriptu koja asinkrono čita 3 tekstualne
 
 - **Node.js:** `v24.11.1` (ili `v24.x`)
 
-1. Preuzmite mapu dz-4
+1. Preuzmite mapu `dz-4`
 2. Otvorite terminal i pozicionirajte se u preuzetoj mapi
+   
    ```bash
    cd dz-4
    ```
-3. Pokrenite skriptu 'wordCounter.js' pomoću naredbe 'node' i kao argumente predajte 3 '.txt' datoteke
+3. Pokrenite skriptu `wordCounter.js` pomoću naredbe `node` i kao argumente predajte 3 `.txt` datoteke*
+   
    ```bash
     node wordCounter.js first.txt second.txt third.txt
    ```
@@ -24,5 +26,7 @@ Zadatak je bio izraditi CLI JavaScript skriptu koja asinkrono čita 3 tekstualne
 ## Primjer ispisa
 
 third.txt (broj rijeci): 7
+
 first.txt (broj rijeci): 6
+
 second.txt (broj rijeci): 4

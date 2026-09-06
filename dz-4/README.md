@@ -23,14 +23,14 @@ Zadatak je bio izraditi CLI JavaScript skriptu koja asinkrono čita 3 tekstualne
     node wordCounter.js first.txt second.txt third.txt
    ```
 
-   (\* U mapi se nalaze defaultne datoteke first.txt, second.txt i third.txt koje se pozivaju ako nisu navedene druge datoteke.)
+   (\* U mapi se nalaze defaultne datoteke first.txt, second.txt i third.txt koje se pozivaju ako nisu navedene vlastite datoteke.)
 
 ## Primjer ispisa
 
 ```bash
 WORD COUNTER LIST
 -------------------------------
-third.txt (broj rijeci): 7
-first.txt (broj rijeci): 6
-second.txt (broj rijeci): 4
+first.txt (broj rijeci): 17
+third.txt (broj rijeci): 12
+second.txt (broj rijeci): 7
 ```

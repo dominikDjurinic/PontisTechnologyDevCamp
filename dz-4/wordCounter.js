@@ -12,7 +12,7 @@ async function readFiles(files) {
       fs.readFile(files[2], "utf-8"),
     ]);
   } catch (err) {
-    console.error("Greska" + err.message);
+    console.error("Greska: " + err.message);
   }
 }
 
@@ -25,11 +25,7 @@ async function wordCounter() {
     files = ["first.txt", "second.txt", "third.txt"];
   }
 
-  //console.log(files);
-
   const filesText = await readFiles(files);
-
-  //console.log(filesText);
 
   const wordCounters = [
     { fileName: files[0], count: 0 },
@@ -37,11 +33,10 @@ async function wordCounter() {
     { fileName: files[2], count: 0 },
   ];
 
-  //console.log(wordCounters);
-
   for (let i = 0; i < filesText.length; i++) {
     // Brojenje rijeci u datoteci
-    wordCounters[i].count = filesText[i].split(" ").length;
+    // regex /\s+/ - svi prazni znakovi (razmak, novi red, tab)
+    wordCounters[i].count = filesText[i].split(/\s+/).length;
   }
 
   wordCounters.sort((a, b) => b.count - a.count); // desc sortiranje

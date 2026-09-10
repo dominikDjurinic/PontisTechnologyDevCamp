@@ -1,13 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { ShowCardProps } from "../data/ShowsDataTypes";
+import { ShowCardProps } from "../lib/ShowsDataTypes";
 import { StarIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 
-export default function CatalogCard({ show }: ShowCardProps) {
+export default function CatalogCard({ show, list }: ShowCardProps) {
   return (
     <Link href={`/serija/${show.id}`} className="hover:text-red-500">
-      <div className="h-100 flex flex-col items-center justify-center gap-5 bg-gray-100 w-80 rounded-2xl px-10 py-5 text-center hover:bg-gray-200">
+      <div className="relative h-100 flex flex-col items-center justify-center gap-5 bg-gray-100 w-80 rounded-2xl px-10 py-5 text-center hover:bg-gray-200">
+        {list && <div className="absolute top-0 right-0">LISTA</div>}
         {show.image && (
           <Image
             className="w-auto h-auto"

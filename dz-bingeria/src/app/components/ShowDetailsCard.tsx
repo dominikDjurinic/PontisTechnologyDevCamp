@@ -1,5 +1,5 @@
 import React from "react";
-import { ShowDetailsCardProps } from "../data/ShowsDataTypes";
+import { ShowDetailsCardProps } from "../lib/ShowsDataTypes";
 import { RectangleStackIcon, StarIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import parse from "html-react-parser";

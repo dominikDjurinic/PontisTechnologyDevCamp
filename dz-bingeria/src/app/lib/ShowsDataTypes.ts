@@ -21,6 +21,7 @@ export type RawShow = {
 
 export type ShowCardProps = {
   show: Show;
+  list?: boolean;
 };
 
 export type ShowDetails = {

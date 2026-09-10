@@ -1,5 +1,5 @@
 import React from "react";
-import { Show } from "../data/ShowsDataTypes";
+import { Show } from "../lib/ShowsDataTypes";
 import { getShowData } from "../controllers/getShowData";
 import CatalogueCard from "../components/CatalogueCard";
 

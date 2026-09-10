@@ -1,6 +1,6 @@
 import ShowDetailsCard from "@/app/components/ShowDetailsCard";
 import { getShowDetailsData } from "@/app/controllers/getShowDetailsData";
-import { Episode, ShowDetails } from "@/app/data/ShowsDataTypes";
+import { Episode, ShowDetails } from "@/app/lib/ShowsDataTypes";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 

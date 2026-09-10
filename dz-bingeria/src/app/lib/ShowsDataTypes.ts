@@ -4,6 +4,7 @@ export type Show = {
   genres: string[];
   rating: number | null;
   image: string | null | undefined;
+  addedAt?: string;
 };
 
 export type RawShow = {

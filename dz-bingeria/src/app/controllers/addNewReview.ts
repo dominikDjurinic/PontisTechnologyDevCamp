@@ -26,8 +26,8 @@ export async function addNewReview(formData: ReviewForm, showId: string) {
 
   const reviews = await getSavedReviews();
 
-  reviews.push(newReview);
-  await saveReviews(reviews);
+  const updatedReviews = [...reviews, newReview];
+  await saveReviews(updatedReviews);
 
   return {
     success: true,

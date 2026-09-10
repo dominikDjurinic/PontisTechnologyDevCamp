@@ -10,8 +10,12 @@ export async function addShowToList(newShow: Show) {
   const exist = shows.some((show) => show.id === newShow.id);
 
   if (!exist) {
-    shows.push(newShow);
-    await saveShows(shows);
+    const newShowWithDate: Show = {
+      ...newShow,
+      addedAt: new Date().toISOString(),
+    };
+    const updatedShows = [...shows, newShowWithDate];
+    await saveShows(updatedShows);
   }
 
   revalidatePath(`/serija/${newShow.id}`);

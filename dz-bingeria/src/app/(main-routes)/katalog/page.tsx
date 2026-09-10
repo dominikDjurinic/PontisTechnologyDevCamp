@@ -1,7 +1,7 @@
 import React from "react";
-import { Show } from "../lib/ShowsDataTypes";
-import { getShowData } from "../controllers/getShowData";
-import CatalogueCard from "../components/CatalogueCard";
+import { Show } from "../../lib/ShowsDataTypes";
+import { getShowData } from "../../controllers/getShowData";
+import CatalogueCard from "../../components/CatalogueCard";
 
 export default async function Catalogue() {
   const data: Show[] = await getShowData();

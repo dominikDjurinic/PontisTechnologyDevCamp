@@ -1,8 +1,8 @@
 import React from "react";
-import CatalogueCard from "../components/CatalogueCard";
-import { getListData } from "../controllers/getListData";
-import { SortButtons } from "../components/SortButtons";
-import { getSavedReviews } from "../lib/DataStorage";
+import CatalogueCard from "../../components/CatalogueCard";
+import { getListData } from "../../controllers/getListData";
+import { SortButtons } from "../../components/SortButtons";
+import { getSavedReviews } from "../../lib/DataStorage";
 
 type Props = {
   searchParams: Promise<{ sortBy?: string; order?: string }>;
@@ -50,12 +50,11 @@ export default async function MyListPage({ searchParams }: Props) {
   return (
     <div className="w-full flex flex-col items-center gap-5">
       <h2 className="text-2xl md:text-4xl font-bold my-10">
-        Lista serija favorita
+        Moja lista serija
       </h2>
       <div className="w-[95%] md:w-[80%] flex flex-col md:flex-row items-center justify-center gap-5 bg-gray-100 w-80 rounded-2xl p-12 text-center shadow-xs shadow-gray-300">
         <p>
-          Broj serija favorita:{" "}
-          <span className="font-bold">{showListCount}</span>
+          Broj serija: <span className="font-bold">{showListCount}</span>
         </p>
         <p>
           Broj recenziranih serija:{" "}

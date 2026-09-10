@@ -1,0 +1,18 @@
+[
+  {
+    "id": "044d233a-3fc5-42f6-a6bc-ecfc360a2d31",
+    "show_id": "1",
+    "rating": 7,
+    "last_episode": 5,
+    "comment": "Jako dobra serija i preporučujem je svima.",
+    "spoiler": false
+  },
+  {
+    "id": "9dca44b9-55f2-4409-85fc-24f4e4ca1d87",
+    "show_id": "1",
+    "rating": 1,
+    "last_episode": 20,
+    "comment": "Užasna serija! Glavni lik ubije drugog lika! Predosadnooooooo :(",
+    "spoiler": true
+  }
+]

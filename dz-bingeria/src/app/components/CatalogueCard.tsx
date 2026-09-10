@@ -3,35 +3,41 @@ import Image from "next/image";
 import { ShowCardProps } from "../lib/ShowsDataTypes";
 import { StarIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import { showExistInList } from "../controllers/showExistInList";
+import ListButton from "./ListButton";
 
-export default function CatalogCard({ show, list }: ShowCardProps) {
+export default async function CatalogCard({ show, list }: ShowCardProps) {
+  const savedShow = await showExistInList(show.id);
+
   return (
-    <Link href={`/serija/${show.id}`} className="hover:text-red-500">
-      <div className="relative h-100 flex flex-col items-center justify-center gap-5 bg-gray-100 w-80 rounded-2xl px-10 py-5 text-center hover:bg-gray-200">
-        {list && <div className="absolute top-0 right-0">LISTA</div>}
-        {show.image && (
-          <Image
-            className="w-auto h-auto"
-            src={show.image}
-            alt={show.name}
-            width={100}
-            height={100}
-          />
-        )}
+    <div className="relative">
+      {list && <ListButton isSaved={savedShow} show={show} />}
+      <Link href={`/serija/${show.id}`} className=" hover:text-red-500">
+        <div className=" h-100 flex flex-col items-center justify-center gap-5 bg-gray-100 w-80 rounded-2xl px-10 py-5 text-center">
+          {show.image && (
+            <Image
+              className="w-auto h-auto"
+              src={show.image}
+              alt={show.name}
+              width={100}
+              height={100}
+            />
+          )}
 
-        <h2 className="font-bold text-xl">{show.name}</h2>
+          <h2 className="font-bold text-xl">{show.name}</h2>
 
-        <p className="flex justify-center flex-wrap gap-x-2 text-black">
-          Žanrovi:{" "}
-          {show.genres.map((genre) => {
-            return <span key={genre}>{genre}</span>;
-          })}
-        </p>
-        <div className="flex justify-center items-center gap-2 text-black">
-          <p>Ocjena: {show.rating}</p>
-          <StarIcon className="w-4 h-4" />
+          <p className="flex justify-center flex-wrap gap-x-2 text-black">
+            Žanrovi:{" "}
+            {show.genres.map((genre) => {
+              return <span key={genre}>{genre}</span>;
+            })}
+          </p>
+          <div className="flex justify-center items-center gap-2 text-black">
+            <p>Ocjena: {show.rating}</p>
+            <StarIcon className="w-4 h-4" />
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }

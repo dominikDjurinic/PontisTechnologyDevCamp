@@ -15,4 +15,5 @@ export async function addShowToList(newShow: Show) {
   }
 
   revalidatePath(`/serija/${newShow.id}`);
+  revalidatePath("/lista");
 }

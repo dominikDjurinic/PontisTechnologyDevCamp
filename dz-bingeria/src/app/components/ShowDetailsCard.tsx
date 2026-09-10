@@ -3,13 +3,18 @@ import { ShowDetailsCardProps } from "../lib/ShowsDataTypes";
 import { RectangleStackIcon, StarIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import parse from "html-react-parser";
+import { showExistInList } from "../controllers/showExistInList";
+import ListButton from "./ListButton";
 
-export default function ShowDetailsCard({
+export default async function ShowDetailsCard({
   show,
   episodes,
 }: ShowDetailsCardProps) {
+  const savedShow = await showExistInList(show.id);
+
   return (
-    <div className="w-[95%] md:w-[80%] flex flex-col md:flex-row items-center justify-center gap-5 bg-gray-100 w-80 rounded-2xl p-10 text-center shadow-xs shadow-gray-300">
+    <div className="relative w-[95%] md:w-[80%] flex flex-col md:flex-row items-center justify-center gap-5 bg-gray-100 w-80 rounded-2xl p-10 text-center shadow-xs shadow-gray-300">
+      <ListButton isSaved={savedShow} show={show} path={`/serija/${show.id}`} />
       <div className="w-full md:w-[50%] flex items-center justify-center">
         {show.image && (
           <Image

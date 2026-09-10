@@ -1,0 +1,33 @@
+import ShowDetailsCard from "@/app/components/ShowDetailsCard";
+import { getShowDetailsData } from "@/app/controllers/getShowDetailsData";
+import { Episode, ShowDetails } from "@/app/data/ShowsDataTypes";
+import { ArrowLeftIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
+
+import React from "react";
+
+type Props = {
+  params: Promise<{ id: string }>;
+};
+
+export default async function DetailsPage({ params }: Props) {
+  const { id } = await params;
+
+  const [showDetails, episodes]: [ShowDetails, Episode[]] =
+    await getShowDetailsData(id);
+
+  return (
+    <div className="w-full flex flex-col items-center gap-5">
+      <h2 className="text-2xl md:text-4xl font-bold my-10">
+        Detaljni pregled serije
+      </h2>
+      <Link
+        href={"/katalog"}
+        className="px-3 py-2 bg-red-500 hover:bg-red-400 text-white text-sm font-bold rounded-2xl cursor-pointer flex items-center"
+      >
+        <ArrowLeftIcon className="w-5 h-5" /> <p>Povratak na katalog</p>
+      </Link>
+      <ShowDetailsCard show={showDetails} episodes={episodes} />
+    </div>
+  );
+}

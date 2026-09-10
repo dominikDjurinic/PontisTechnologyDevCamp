@@ -52,3 +52,8 @@ export type Episode = {
   id: number;
   name: string;
 };
+
+export type ShowDetailsCardProps = {
+  show: ShowDetails;
+  episodes: Episode[];
+};

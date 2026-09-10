@@ -1,10 +1,13 @@
+import { notFound } from "next/navigation";
 import { RawShow, Show } from "../data/ShowsDataTypes";
 
 export async function getShowData() {
   try {
     const raw_data = await fetch("https://api.tvmaze.com/shows?page=0");
 
-    if (!raw_data) return;
+    if (!raw_data) {
+      notFound();
+    }
 
     const data: RawShow[] = await raw_data.json();
 
@@ -16,9 +19,9 @@ export async function getShowData() {
       image: show.image?.original,
     }));
 
-    return shows;
+    return shows as Show[];
   } catch (err) {
     console.error(err);
-    return;
+    notFound();
   }
 }

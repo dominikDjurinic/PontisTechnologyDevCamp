@@ -11,7 +11,6 @@ export default function ListButton({
 }: {
   show: Show;
   isSaved: boolean;
-  path: string;
 }) {
   if (isSaved) {
     return (

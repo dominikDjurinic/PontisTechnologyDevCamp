@@ -24,8 +24,10 @@ export default function SearchBar() {
       params.delete("q");
     }
 
-    if (params.get("q") !== (searchParams.get("q") || null)) {
-      router.push(`${pathname}?${params.toString()}`);
+    const newUrl = `${pathname}?${params.toString()}`;
+
+    if (window.location.search !== `?${params.toString()}`) {
+      router.push(newUrl);
     }
   }, [debouncedQuery, pathname, router, searchParams]);
 

@@ -26,5 +26,19 @@
     "premiered": "2014-03-19",
     "summary": "<p>Ninety-seven years ago, nuclear Armageddon decimated planet Earth, destroying civilization. The only survivors were the 400 inhabitants of 12 international space stations that were in orbit at the time. Three generations have been born in space, the survivors now number 4,000, and resources are running out on their dying \"Ark\" - the 12 stations now linked together and repurposed to keep the survivors alive. Draconian measures including capital punishment and population control are the order of the day, as the leaders of the Ark take ruthless steps to ensure their future, including secretly exiling a group of 100 juvenile prisoners to the Earth's surface to test whether it's habitable.</p>",
     "addedAt": "2026-09-10T21:02:20.123Z"
+  },
+  {
+    "id": 1,
+    "name": "Under the Dome",
+    "genres": [
+      "Drama",
+      "Science-Fiction",
+      "Thriller"
+    ],
+    "rating": 6.6,
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/610/1525272.jpg",
+    "premiered": "2013-06-24",
+    "summary": "<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>",
+    "addedAt": "2026-09-10T23:54:19.593Z"
   }
 ]

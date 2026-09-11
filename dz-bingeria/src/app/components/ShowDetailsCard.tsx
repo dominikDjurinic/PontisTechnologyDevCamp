@@ -16,7 +16,7 @@ export default async function ShowDetailsCard({
 
   return (
     <div className="relative w-[95%] md:w-[80%] flex flex-col md:flex-row items-center justify-center gap-5 bg-gray-100 w-80 rounded-2xl p-12 text-center shadow-xs shadow-gray-300">
-      <ListButton isSaved={savedShow} show={show} path={`/serija/${show.id}`} />
+      <ListButton isSaved={savedShow} show={show} />
       <div className="w-full md:w-[50%] flex items-center justify-center">
         {show.image && (
           <Image

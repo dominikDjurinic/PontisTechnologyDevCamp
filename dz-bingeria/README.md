@@ -3,7 +3,7 @@ Domaća zadaća iz integrativnog projekta nakon predavanja Frontenda (F1, F2, F3
 
 ## Zadatak
 
-Zadatak je bio izraditi Next.js aplikaciju prema uputama i pravilima u <a href="https://github.com/dominikDjurinic/PontisTechnologyDevCamp/main/dz-bingeria/public/PontisTechDevCamp2026-zadaca-Bingeria.pdf">Zadataku</a>. Pritom je bilo potrebno primijeniti sva dotad stečena znanja iz područja Frontenda u sklopu održanih predavanja.
+Zadatak je bio izraditi Next.js aplikaciju prema uputama i pravilima u <a href="https://github.com/dominikDjurinic/PontisTechnologyDevCamp/blob/main/dz-bingeria/public/PontisTechDevCamp2026-zadaca-Bingeria.pdf">Zadataku</a>. Pritom je bilo potrebno primijeniti sva dotad stečena znanja iz područja Frontenda u sklopu održanih predavanja.<br/><br/>
 
 ## Upute za pokretanje
 
@@ -23,32 +23,32 @@ Zadatak je bio izraditi Next.js aplikaciju prema uputama i pravilima u <a href="
     npm install
    ```
 
-   - dev model rada
+   - dev model rada<br/><br/>
 
    ```bash
     npm run dev
    ```
 
-    - build model rada (produkcijski model)
+    - build model rada (produkcijski model)<br/><br/>
     
    ```bash
     npm run build
     npm start
    ```
-
+<br/><br/>
 ## Pregled aplikacije
 
    1.  `/`<br/><br/>
-      <img src="public/screen/1.png" width="500px"/><br/><br/>
+      <img src="public/screen/1.png" width="1000px"/><br/><br/>
    2. `/katalog`<br/><br/>
-      <img src="public/screen/2.png" width="500px"/><br/><br/>
+      <img src="public/screen/2.png" width="1000px"/><br/><br/>
    3. `/serija/[id]`<br/><br/>
-      <img src="public/screen/3.png" width="500px"/><br/><br/>
-      <img src="public/screen/4.png" width="500px"/><br/><br/>
+      <img src="public/screen/3.png" width="1000px"/><br/><br/>
+      <img src="public/screen/4.png" width="1000px"/><br/><br/>
    4. `/lista`<br/><br/>
-      <img src="public/screen/5.png" width="500px"/><br/><br/>
+      <img src="public/screen/5.png" width="1000px"/><br/><br/>
    5. `/nova-recenzija/[id]`<br/><br/>
-      <img src="public/screen/6.png" width="500px"/><br/><br/>
+      <img src="public/screen/6.png" width="1000px"/><br/><br/>
 
 
 ## Odgovori na pitanja

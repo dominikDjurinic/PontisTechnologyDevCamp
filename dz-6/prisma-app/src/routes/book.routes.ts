@@ -1,12 +1,28 @@
-import { PrismaClient } from "@prisma/client";
-import { Router, Request, Response } from "express";
+import { Router } from "express";
+import {
+  deleteBookById,
+  getAllBooks,
+  getBookById,
+  getBooksHandler,
+  postNewBook,
+  updateBookById,
+} from "../controllers/book.controller";
 
 const bookRouter = Router();
-const prisma = new PrismaClient();
 
-bookRouter.get("/", async (req: Request, res: Response) => {
-  const books = await prisma.book.findMany();
-  res.json(books);
-});
+//GET /books
+bookRouter.get("/", getBooksHandler);
+
+//GET /books/:id
+bookRouter.get("/:id", getBookById);
+
+//POST /books
+bookRouter.post("/", postNewBook);
+
+//PUT /books/:id
+bookRouter.put("/:id", updateBookById);
+
+//DELETE /books/:id
+bookRouter.delete("/:id", deleteBookById);
 
 export default bookRouter;

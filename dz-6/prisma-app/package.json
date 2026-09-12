@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "postinstall": "prisma generate",
+    "postinstall": "prisma generate && prisma db push && tsx prisma/seed.ts",
     "dev": "tsx watch src/index.ts",
     "db:push": "prisma db push && tsx prisma/seed.ts",
     "seed": "tsx prisma/seed.ts",

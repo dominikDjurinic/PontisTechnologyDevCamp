@@ -1,0 +1,70 @@
+{
+  "info": {
+    "name": "DevCamp - Books API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "BASE_URL", "value": "http://localhost:3000" }
+  ],
+  "item": [
+    {
+      "name": "GET All Books",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{BASE_URL}}/api/books", "host": ["{{BASE_URL}}"], "path": ["api", "books"] }
+      }
+    },
+    {
+      "name": "GET Book by Id (postojeci)",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{BASE_URL}}/api/books/1", "host": ["{{BASE_URL}}"], "path": ["api", "books", "1"] }
+      }
+    },
+    {
+      "name": "GET Book by Id (nepostojeci -> 404)",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{BASE_URL}}/api/books/999", "host": ["{{BASE_URL}}"], "path": ["api", "books", "999"] }
+      }
+    },
+    {
+      "name": "GET Book by Id (slovo -> bonus)",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{BASE_URL}}/api/books/abc", "host": ["{{BASE_URL}}"], "path": ["api", "books", "abc"] }
+      }
+    },
+    {
+      "name": "POST Create Book",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Nova Knjiga\",\n  \"author\": \"Nepoznati\",\n  \"isbn\": \"978-953-0-60444-5\"\n ,\n  \"price\": 100,\n  \"inStock\": true}"
+        },
+        "url": { "raw": "{{BASE_URL}}/api/books", "host": ["{{BASE_URL}}"], "path": ["api", "books"] }
+      }
+    },
+    {
+      "name": "PUT Update Book",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Nova Knjiga\",\n  \"author\": \"Nepoznati\",\n  \"isbn\": \"978-953-0-60444-8\"\n ,\n  \"price\": 13.59,\n  \"inStock\": true}"
+        },
+        "url": { "raw": "{{BASE_URL}}/api/books/1", "host": ["{{BASE_URL}}"], "path": ["api", "books", "1"] }
+      }
+    },
+    {
+      "name": "DELETE Book (-> 204)",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "{{BASE_URL}}/api/books/3", "host": ["{{BASE_URL}}"], "path": ["api", "books", "3"] }
+      }
+    }
+  ]
+}

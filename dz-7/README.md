@@ -27,13 +27,15 @@
 ## Rezultat Profilera
 
 1. Prije uvođenja memoizacije
-   ListByQuery je narančast u Profileru i traje oko 2.4ms jer se cijela komponenta ponovno renderira kao i svi HTML elementi djeca u .map funkciji.
+   <br/> <br/>
+   `ListByQuery` je **narančast** u Profileru i traje oko **2.4ms** jer se cijela komponenta ponovno renderira kao i svi HTML elementi djeca u .map funkciji.
 
    Promjena stanja roditelja pokreće re-render roditelja, a posljedično i re-render djece.
+<br/> <br/>
+3. Nakon uvođenja memoizacije - `ListItem`
+   <br/> <br/>
+   `ListByQuery` je **žut** u Profileru i traje oko **1.4ms** jer dobiva novi niz podataka nakon unosa nove stavke (mutacije).
 
-2. Nakon uvođenja memoizacije - `ListItem`
-   ListByQuery je žut u Profileru i traje oko 1.4ms jer dobiva novi niz podataka nakon unosa nove stavke (mutacije).
-
-   Stari ListItem elementi su sivi u Profileru, što znači da nije došlo do re-rendera elemenata, osim nove stavke.
+   Stari `ListItem` elementi su **sivi** u Profileru, što znači da nije došlo do re-rendera elemenata, osim nove stavke.
 
    Nakon memoizacije, promjena stanja roditelja više ne uzrokuje re-render djece ako nije došlo do promjene podataka (props).

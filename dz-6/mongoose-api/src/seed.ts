@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 import { Book } from "./models/book.model";
+import dotenv from "dotenv";
+dotenv.config();
 
 const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/books";
 

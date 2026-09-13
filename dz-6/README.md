@@ -18,6 +18,7 @@ Zadatak je bio izraditi Book Store REST API pomoću Express.js biblioteke koji o
    cd dz-6
    cd prisma-api
    ```
+   (u .env datoteku dodati DATABASE_URL="file:./dev.db" i PORT=3000)
 
 3. Instalirajte potrebne biblioteke iz `package.json` naredbom
 
@@ -47,13 +48,13 @@ Zadatak je bio izraditi Book Store REST API pomoću Express.js biblioteke koji o
    npm install
    ```
 
-4. Pokrenite MongoDB kolekcijiu books pomoću Docker-a
+4. Pokrenite MongoDB bazu podataka books pomoću Docker-a
 
    ```bash
    docker run -d --name mongo-books -p 27017:27017 mongo:latest
    ```
 
-   (u .env datoteku dodati MONGO_URI=mongodb://localhost:27017/knjiznica)
+   (u .env datoteku dodati MONGO_URI=mongodb://localhost:27017/books i PORT=3000)
 
 5. Povezivanje na MongoDB i seed s podacima
    

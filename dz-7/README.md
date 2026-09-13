@@ -1,5 +1,9 @@
 # Sedma domaća zadaća @ Pontis Technology DevCamp 2026
 
+## Zadatak
+
+Izraditi aplikaciju s globalnim (Zustand) i server stanjima (TanStack). Provesti memoizaciju elemenata liste.
+
 ## Upute za pokretanje
 
 - **Next.js:**

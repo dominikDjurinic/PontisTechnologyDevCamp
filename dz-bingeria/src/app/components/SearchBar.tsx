@@ -35,7 +35,7 @@ export default function SearchBar() {
   }, [debouncedQuery, pathname, router]);
 
   return (
-    <div className="my-4 flex items-center gap-5 bg-gray-100 shadow-xs shadow-gray-300 p-5 rounded-2xl">
+    <div className="my-4 flex items-center gap-5 bg-gray-100 dark:bg-gray-800 shadow-xs shadow-gray-300 p-5 rounded-2xl">
       <input
         type="text"
         value={text}

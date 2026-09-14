@@ -28,7 +28,7 @@ export default async function DetailsPage({ params }: Props) {
       <Link
         href={"/katalog"}
         prefetch={false}
-        className="px-3 py-2 bg-red-500 hover:bg-red-400 text-white text-sm font-bold rounded-2xl cursor-pointer flex items-center"
+        className="px-3 py-2 bg-red-500 hover:bg-red-400 dark:bg-gray-800 dark:hover:bg-gray-500 text-white text-sm font-bold rounded-2xl cursor-pointer flex items-center"
       >
         <ArrowLeftIcon className="w-5 h-5" /> <p>Povratak na katalog</p>
       </Link>
@@ -36,7 +36,7 @@ export default async function DetailsPage({ params }: Props) {
       <h2 className="text-2xl md:text-4xl font-bold my-10">
         Recenzije - {reviews.length}
       </h2>
-      <div className="relative w-[95%] md:w-[80%] grid grid-cols-3 items-center justify-evenly bg-gray-100 w-80 rounded-2xl p-10 text-center shadow-xs shadow-gray-300">
+      <div className="relative w-[95%] md:w-[80%] grid grid-cols-3 items-center justify-evenly bg-gray-100 dark:bg-gray-800  w-80 rounded-2xl p-10 text-center shadow-xs shadow-gray-300">
         <p>Ocjena</p>
         <p>Posljednja epizoda</p>
         <p>Komentar</p>

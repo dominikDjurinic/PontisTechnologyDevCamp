@@ -52,7 +52,7 @@ export default async function MyListPage({ searchParams }: Props) {
       <h2 className="text-2xl md:text-4xl font-bold my-10">
         Moja lista serija
       </h2>
-      <div className="w-[95%] md:w-[80%] flex flex-col md:flex-row items-center justify-center gap-5 bg-gray-100 w-80 rounded-2xl p-12 text-center shadow-xs shadow-gray-300">
+      <div className="w-[95%] md:w-[80%] flex flex-col md:flex-row items-center justify-center gap-5 bg-gray-100 dark:bg-gray-800 w-80 rounded-2xl p-12 text-center shadow-xs shadow-gray-300">
         <p>
           Broj serija: <span className="font-bold">{showListCount}</span>
         </p>

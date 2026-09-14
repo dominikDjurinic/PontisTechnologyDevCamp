@@ -30,7 +30,7 @@ export default function ReviewForm({ showId }: { showId: string }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col items-center gap-5 w-[95%] md:w-[50%] bg-gray-100 p-10 rounded-2xl"
+      className="flex flex-col items-center gap-5 w-[95%] md:w-[50%] bg-gray-100 dark:bg-gray-800 p-10 rounded-2xl"
     >
       <label className="font-bold">Ocjena</label>
       <input
@@ -69,7 +69,7 @@ export default function ReviewForm({ showId }: { showId: string }) {
       )}
       <button
         type="submit"
-        className="w-[90%] md:w-100 bg-red-500 font-bold text-white p-5 cursor-pointer rounded-2xl"
+        className="w-[90%] md:w-100 bg-red-500 hover:bg-red-400 dark:bg-black dark:hover:bg-gray-900 font-bold text-white p-5 cursor-pointer rounded-2xl"
       >
         Unos
       </button>

@@ -32,7 +32,7 @@ export function SortButtons() {
         onClick={() => handleSort("date")}
         className={`px-3 py-1.5 rounded-lg border text-sm font-medium flex items-center ${
           currentSortBy === "date"
-            ? "bg-red-500 text-white"
+            ? "bg-red-500 dark:bg-gray-800 text-white"
             : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
         }`}
       >
@@ -52,7 +52,7 @@ export function SortButtons() {
         onClick={() => handleSort("rating")}
         className={`px-3 py-1.5 rounded-lg border text-sm font-medium flex items-center ${
           currentSortBy === "rating"
-            ? "bg-red-500 text-white"
+            ? "bg-red-500 dark:bg-gray-800 text-white"
             : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
         }`}
       >

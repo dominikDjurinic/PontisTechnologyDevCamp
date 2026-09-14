@@ -27,6 +27,7 @@ export default async function DetailsPage({ params }: Props) {
       </h2>
       <Link
         href={"/katalog"}
+        prefetch={false}
         className="px-3 py-2 bg-red-500 hover:bg-red-400 text-white text-sm font-bold rounded-2xl cursor-pointer flex items-center"
       >
         <ArrowLeftIcon className="w-5 h-5" /> <p>Povratak na katalog</p>

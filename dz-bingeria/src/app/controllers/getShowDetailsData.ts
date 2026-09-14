@@ -3,9 +3,14 @@ import { Episode, RawShowDetails, ShowDetails } from "../lib/ShowsDataTypes";
 
 export async function getShowDetailsData(id: string) {
   try {
-    const raw_data_show_details = fetch(`https://api.tvmaze.com/shows/${id}`);
+    const raw_data_show_details = fetch(`https://api.tvmaze.com/shows/${id}`, {
+      next: { revalidate: 3600 },
+    });
     const raw_data_episodes = fetch(
       `https://api.tvmaze.com/shows/${id}/episodes`,
+      {
+        next: { revalidate: 3600 },
+      },
     );
 
     const [show_details_resp, episodes_resp] = await Promise.all([

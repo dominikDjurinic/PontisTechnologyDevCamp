@@ -1,5 +1,3 @@
-"use server";
-
 import { getSavedReviews } from "../lib/DataStorage";
 import { Review } from "../lib/ReviewsDataTypes";
 

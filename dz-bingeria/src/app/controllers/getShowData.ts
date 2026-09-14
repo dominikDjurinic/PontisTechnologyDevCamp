@@ -3,9 +3,11 @@ import { RawShow, Show } from "../lib/ShowsDataTypes";
 
 export async function getShowData() {
   try {
-    const raw_data = await fetch("https://api.tvmaze.com/shows?page=0");
+    const raw_data = await fetch("https://api.tvmaze.com/shows?page=0", {
+      next: { revalidate: 3600 },
+    });
 
-    if (!raw_data) {
+    if (!raw_data.ok) {
       notFound();
     }
 
@@ -22,6 +24,6 @@ export async function getShowData() {
     return shows as Show[];
   } catch (err) {
     console.error(err);
-    notFound();
+    return [];
   }
 }

@@ -16,6 +16,10 @@ export default function SearchBar() {
   const debouncedQuery = useDebounce(text, 400);
 
   useEffect(() => {
+    const currentQuery = searchParams.get("q") || "";
+
+    if (debouncedQuery === currentQuery) return;
+
     const params = new URLSearchParams(searchParams.toString());
 
     if (debouncedQuery) {
@@ -24,12 +28,11 @@ export default function SearchBar() {
       params.delete("q");
     }
 
-    const newUrl = `${pathname}?${params.toString()}`;
+    const queryString = params.toString();
+    const newUrl = queryString ? `${pathname}?${queryString}` : pathname;
 
-    if (window.location.search !== `?${params.toString()}`) {
-      router.push(newUrl);
-    }
-  }, [debouncedQuery, pathname, router, searchParams]);
+    router.push(newUrl);
+  }, [debouncedQuery, pathname, router]);
 
   return (
     <div className="my-4 flex items-center gap-5 bg-gray-100 shadow-xs shadow-gray-300 p-5 rounded-2xl">

@@ -3,9 +3,9 @@ import Image from "next/image";
 import { ShowCardProps } from "../lib/ShowsDataTypes";
 import { StarIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-import { showExistInList } from "../controllers/showExistInList";
 import ListButton from "./ListButton";
 import CompareButton from "./CompareButton";
+import { showExistInList } from "../controllers/list.controllers/showExistInList";
 
 export default async function CatalogCard({ show, list }: ShowCardProps) {
   const savedShow = await showExistInList(show.id);

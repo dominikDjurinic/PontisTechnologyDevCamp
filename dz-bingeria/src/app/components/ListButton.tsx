@@ -2,8 +2,8 @@
 
 import { HeartIcon } from "@heroicons/react/20/solid";
 import { Show } from "../lib/ShowsDataTypes";
-import { addShowToList } from "../controllers/addShowToList";
-import { deleteShowFromList } from "../controllers/deleteShowFromList";
+import { addShowToList } from "../controllers/list.controllers/addShowToList";
+import { deleteShowFromList } from "../controllers/list.controllers/deleteShowFromList";
 
 export default function ListButton({
   show,

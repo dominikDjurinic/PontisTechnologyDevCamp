@@ -55,7 +55,22 @@ export type Episode = {
   name: string;
 };
 
+export type Season = {
+  id: number;
+  number: number;
+};
+
 export type ShowDetailsCardProps = {
   show: ShowDetails;
   episodes: Episode[];
+  seasons: Season[];
+};
+
+export type SeasonEpisode = {
+  id: number;
+  name: string;
+  season: number;
+  number: number;
+  airdate: string;
+  watched?: boolean;
 };

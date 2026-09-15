@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeSync from "./components/ThemeSync";
 import Script from "next/script";
+import Provider from "./provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,8 +48,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
 
       <body className="min-h-full flex flex-col bg-white dark:bg-black text-black dark:text-white">
-        <ThemeSync />
-        {children}
+        <Provider>
+          <ThemeSync />
+          {children}
+        </Provider>
       </body>
     </html>
   );

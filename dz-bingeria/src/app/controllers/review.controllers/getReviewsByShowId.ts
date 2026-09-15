@@ -1,5 +1,5 @@
-import { getSavedReviews } from "../lib/DataStorage";
-import { Review } from "../lib/ReviewsDataTypes";
+import { getSavedReviews } from "@/app/lib/DataStorage";
+import { Review } from "@/app/lib/ReviewsDataTypes";
 
 export async function getReviewsByShowId(showId: string) {
   const reviews = await getSavedReviews();

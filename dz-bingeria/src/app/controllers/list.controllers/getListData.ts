@@ -1,5 +1,5 @@
-import { getSavedShows } from "../lib/DataStorage";
-import { Show } from "../lib/ShowsDataTypes";
+import { getSavedShows } from "@/app/lib/DataStorage";
+import { Show } from "@/app/lib/ShowsDataTypes";
 
 export async function getListData() {
   const listData: Show[] = await getSavedShows();

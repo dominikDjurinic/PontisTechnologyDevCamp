@@ -3,14 +3,16 @@ import { ShowDetailsCardProps } from "../lib/ShowsDataTypes";
 import { RectangleStackIcon, StarIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import parse from "html-react-parser";
-import { showExistInList } from "../controllers/showExistInList";
+import { showExistInList } from "../controllers/list.controllers/showExistInList";
 import ListButton from "./ListButton";
 import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import SeasonsEpisodesContainer from "./SeasonsEpisodeContainer";
 
 export default async function ShowDetailsCard({
   show,
   episodes,
+  seasons,
 }: ShowDetailsCardProps) {
   const savedShow = await showExistInList(show.id);
 

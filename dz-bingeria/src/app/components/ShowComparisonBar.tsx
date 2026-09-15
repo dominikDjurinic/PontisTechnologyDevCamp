@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getShowById } from "../controllers/getShowById";
+import { getShowById } from "../controllers/show.controllers/getShowById";
 import { Show } from "../lib/ShowsDataTypes";
 import { useShowComparison } from "../store/showsComparison";
 import Link from "next/link";

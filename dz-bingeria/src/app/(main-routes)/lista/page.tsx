@@ -1,6 +1,6 @@
 import React from "react";
 import CatalogueCard from "../../components/CatalogueCard";
-import { getListData } from "../../controllers/getListData";
+import { getListData } from "../../controllers/list.controllers/getListData";
 import { SortButtons } from "../../components/SortButtons";
 import { getSavedReviews } from "../../lib/DataStorage";
 

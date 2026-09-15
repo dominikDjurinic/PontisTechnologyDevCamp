@@ -1,8 +1,8 @@
 "use server";
 
-import { getSavedReviews, saveReviews } from "../lib/DataStorage";
-import { Review, ReviewForm } from "../lib/ReviewsDataTypes";
-import { schema } from "../lib/zodSchema";
+import { getSavedReviews, saveReviews } from "@/app/lib/DataStorage";
+import { Review, ReviewForm } from "@/app/lib/ReviewsDataTypes";
+import { schema } from "@/app/lib/zodSchema";
 
 export async function addNewReview(formData: ReviewForm, showId: string) {
   const validReviewData = schema.safeParse(formData); //dodatna zod validacija

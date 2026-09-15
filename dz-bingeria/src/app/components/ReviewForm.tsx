@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { schema } from "../lib/zodSchema";
 import { type ReviewForm, ReviewResponse } from "../lib/ReviewsDataTypes";
-import { addNewReview } from "../controllers/addNewReview";
+import { addNewReview } from "../controllers/review.controllers/addNewReview";
 
 export default function ReviewForm({ showId }: { showId: string }) {
   const {

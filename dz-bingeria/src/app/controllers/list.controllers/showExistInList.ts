@@ -1,4 +1,4 @@
-import { getSavedShows } from "../lib/DataStorage";
+import { getSavedShows } from "@/app/lib/DataStorage";
 
 export async function showExistInList(id: number) {
   const shows = await getSavedShows();

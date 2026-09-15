@@ -1,5 +1,5 @@
 import CatalogueCard from "@/app/components/CatalogueCard";
-import { getShowById } from "@/app/controllers/getShowById";
+import { getShowById } from "@/app/controllers/show.controllers/getShowById";
 import { Show } from "@/app/lib/ShowsDataTypes";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";

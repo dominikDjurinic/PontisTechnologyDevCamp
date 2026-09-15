@@ -1,5 +1,10 @@
+import {
+  Episode,
+  RawShowDetails,
+  Season,
+  ShowDetails,
+} from "@/app/lib/ShowsDataTypes";
 import { notFound } from "next/navigation";
-import { Episode, RawShowDetails, ShowDetails } from "../lib/ShowsDataTypes";
 
 export async function getShowDetailsData(id: string) {
   try {
@@ -12,18 +17,32 @@ export async function getShowDetailsData(id: string) {
         next: { revalidate: 3600 },
       },
     );
+    const raw_data_seasons = fetch(
+      `https://api.tvmaze.com/shows/${id}/seasons`,
+      {
+        next: { revalidate: 3600 },
+      },
+    );
 
-    const [show_details_resp, episodes_resp] = await Promise.all([
+    const [show_details_resp, episodes_resp, seasons_resp] = await Promise.all([
       raw_data_show_details,
       raw_data_episodes,
+      raw_data_seasons,
     ]);
 
-    if (!show_details_resp.ok || !episodes_resp.ok) {
+    if (!show_details_resp.ok || !episodes_resp.ok || !seasons_resp.ok) {
       notFound();
     }
 
-    const [show_details_data, episodes_data]: [RawShowDetails, Episode[]] =
-      await Promise.all([show_details_resp.json(), episodes_resp.json()]);
+    const [show_details_data, episodes_data, seasons_data]: [
+      RawShowDetails,
+      Episode[],
+      Season[],
+    ] = await Promise.all([
+      show_details_resp.json(),
+      episodes_resp.json(),
+      seasons_resp.json(),
+    ]);
 
     const showDetails: ShowDetails = {
       id: show_details_data.id,
@@ -40,7 +59,16 @@ export async function getShowDetailsData(id: string) {
       name: ep.name,
     }));
 
-    return [showDetails, episodes] as [ShowDetails, Episode[]];
+    const seasons: Season[] = seasons_data.map((s) => ({
+      id: s.id,
+      number: s.number,
+    }));
+
+    return [showDetails, episodes, seasons] as [
+      ShowDetails,
+      Episode[],
+      Season[],
+    ];
   } catch {
     notFound();
   }

@@ -1,12 +1,11 @@
 import ReviewCard from "@/app/components/ReviewCard";
+import SeasonsEpisodesContainer from "@/app/components/SeasonsEpisodeContainer";
 import ShowDetailsCard from "@/app/components/ShowDetailsCard";
-import { getReviewsByShowId } from "@/app/controllers/getReviewsByShowId";
-import { getShowDetailsData } from "@/app/controllers/getShowDetailsData";
-import { Episode, ShowDetails } from "@/app/lib/ShowsDataTypes";
+import { getReviewsByShowId } from "@/app/controllers/review.controllers/getReviewsByShowId";
+import { getShowDetailsData } from "@/app/controllers/show.controllers/getShowDetailsData";
+import { Episode, Season, ShowDetails } from "@/app/lib/ShowsDataTypes";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-
-import React from "react";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -15,7 +14,7 @@ type Props = {
 export default async function DetailsPage({ params }: Props) {
   const { id } = await params;
 
-  const [showDetails, episodes]: [ShowDetails, Episode[]] =
+  const [showDetails, episodes, seasons]: [ShowDetails, Episode[], Season[]] =
     await getShowDetailsData(id);
 
   const reviews = await getReviewsByShowId(id);
@@ -32,7 +31,12 @@ export default async function DetailsPage({ params }: Props) {
       >
         <ArrowLeftIcon className="w-5 h-5" /> <p>Povratak na katalog</p>
       </Link>
-      <ShowDetailsCard show={showDetails} episodes={episodes} />
+      <ShowDetailsCard
+        show={showDetails}
+        episodes={episodes}
+        seasons={seasons}
+      />
+      <SeasonsEpisodesContainer showId={showDetails.id} seasons={seasons} />
       <h2 className="text-2xl md:text-4xl font-bold my-10">
         Recenzije - {reviews.length}
       </h2>

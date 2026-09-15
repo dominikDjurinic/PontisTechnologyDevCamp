@@ -1,6 +1,6 @@
 import React from "react";
 import { Show } from "../../lib/ShowsDataTypes";
-import { getShowData } from "../../controllers/getShowData";
+import { getShowData } from "../../controllers/show.controllers/getShowData";
 import CatalogueCard from "../../components/CatalogueCard";
 import SearchBar from "@/app/components/SearchBar";
 

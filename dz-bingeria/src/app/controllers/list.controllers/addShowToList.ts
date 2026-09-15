@@ -1,8 +1,9 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { getSavedShows, saveShows } from "../lib/DataStorage";
-import { Show } from "../lib/ShowsDataTypes";
+
+import { Show } from "@/app/lib/ShowsDataTypes";
+import { getSavedShows, saveShows } from "@/app/lib/DataStorage";
 
 export async function addShowToList(newShow: Show) {
   const shows = await getSavedShows();

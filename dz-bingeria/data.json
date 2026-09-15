@@ -40,5 +40,33 @@
     "premiered": "2013-06-24",
     "summary": "<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>",
     "addedAt": "2026-09-10T23:54:19.593Z"
+  },
+  {
+    "id": 23,
+    "name": "Once Upon a Time in Wonderland",
+    "genres": [
+      "Drama",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": 6.9,
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/73/183661.jpg",
+    "premiered": "2013-10-10",
+    "summary": "<p>In Victorian England, the young and beautiful Alice tells a tale of a strange new land that exists on the other side of a rabbit hole. An invisible cat, a hookah smoking caterpillar and playing-cards that talk are just some of the fantastic things she's seen during this impossible adventure. Surely this troubled girl must be insane, and her doctors aim to cure her with a treatment that will make her forget everything. Alice seems ready to put it all behind her, especially the painful memory of the genie she fell in love with and lost forever -- the handsome and mysterious Cyrus . But deep down Alice knows this world is real, and just in the nick of time the sardonic Knave of Hearts and the irrepressible White Rabbit arrive to save her from a doomed fate. Together the trio will take a tumble down the rabbit hole to this Wonderland where nothing is impossible.</p>",
+    "addedAt": "2026-09-15T20:00:37.407Z"
+  },
+  {
+    "id": 2,
+    "name": "Person of Interest",
+    "genres": [
+      "Action",
+      "Crime",
+      "Science-Fiction"
+    ],
+    "rating": 8.8,
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/163/407679.jpg",
+    "premiered": "2011-09-22",
+    "summary": "<p>You are being watched. The government has a secret system, a machine that spies on you every hour of every day. I know because I built it. I designed the Machine to detect acts of terror but it sees everything. Violent crimes involving ordinary people. People like you. Crimes the government considered \"irrelevant\". They wouldn't act so I decided I would. But I needed a partner. Someone with the skills to intervene. Hunted by the authorities, we work in secret. You'll never find us. But victim or perpetrator, if your number is up, we'll find you.</p>",
+    "addedAt": "2026-09-15T20:04:31.279Z"
   }
 ]

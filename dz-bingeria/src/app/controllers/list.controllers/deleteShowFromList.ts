@@ -1,7 +1,7 @@
 "use server";
 
+import { getSavedShows, saveShows } from "@/app/lib/DataStorage";
 import { revalidatePath } from "next/cache";
-import { getSavedShows, saveShows } from "../lib/DataStorage";
 
 export async function deleteShowFromList(id: number) {
   let shows = await getSavedShows();

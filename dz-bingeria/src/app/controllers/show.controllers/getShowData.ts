@@ -1,5 +1,5 @@
+import { RawShow, Show } from "@/app/lib/ShowsDataTypes";
 import { notFound } from "next/navigation";
-import { RawShow, Show } from "../lib/ShowsDataTypes";
 
 export async function getShowData() {
   try {

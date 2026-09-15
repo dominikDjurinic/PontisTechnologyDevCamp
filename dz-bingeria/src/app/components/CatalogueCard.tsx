@@ -5,6 +5,7 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { showExistInList } from "../controllers/showExistInList";
 import ListButton from "./ListButton";
+import CompareButton from "./CompareButton";
 
 export default async function CatalogCard({ show, list }: ShowCardProps) {
   const savedShow = await showExistInList(show.id);
@@ -12,6 +13,7 @@ export default async function CatalogCard({ show, list }: ShowCardProps) {
   return (
     <div className="relative">
       {list && <ListButton isSaved={savedShow} show={show} />}
+      <CompareButton id={show.id} />
       <Link
         href={`/serija/${show.id}`}
         className=" hover:text-red-500 dark:hover:text-gray-400"

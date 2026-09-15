@@ -10,7 +10,7 @@ export default function ThemeButton() {
   return (
     <button
       onClick={() => toggleTheme()}
-      className={`flex items-center justify-center gap-2 text-center w-60 uppercase bg-white text-black hover:bg-gray-100 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 p-4 cursor-pointer rounded-2xl`}
+      className={`flex items-center justify-center gap-2 text-center w-60 uppercase bg-white text-black hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-700 p-4 cursor-pointer rounded-2xl`}
     >
       {activeTheme === "light" ? (
         <SunIcon className="w-5 h-5" />

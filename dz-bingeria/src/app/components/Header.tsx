@@ -4,7 +4,7 @@ import NavigationMenu from "./NavigationMenu";
 
 export default function Header() {
   return (
-    <div className="relative w-full flex flex-col items-center justify-center bg-red-500 dark:bg-black gap-10 pt-10">
+    <div className="relative w-full flex flex-col items-center justify-center bg-red-500 dark:bg-gray-800 gap-10 pt-10">
       <h1 className="font-bold text-5xl text-white text-shadow-gray-300 text-shadow-sm flex items-center gap-5">
         Bingeria{" "}
         <span>

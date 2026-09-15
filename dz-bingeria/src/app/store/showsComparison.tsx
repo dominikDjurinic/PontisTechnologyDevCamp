@@ -7,12 +7,16 @@ type ShowComparison = {
   removeAll: () => void;
 };
 
-export const useShowComparison = create<ShowComparison>((set) => ({
+export const useShowComparison = create<ShowComparison>((set, get) => ({
   showsToCompare: [],
-  add: (id) =>
-    set((s) => ({
-      showsToCompare: [...s.showsToCompare, id],
-    })),
+  add: (id) => {
+    const { showsToCompare } = get();
+    if (showsToCompare.length < 3 && !showsToCompare.includes(id)) {
+      set((s) => ({
+        showsToCompare: [...s.showsToCompare, id],
+      }));
+    }
+  },
   remove: (id) =>
     set((s) => ({
       showsToCompare: s.showsToCompare.filter((showId) => showId !== id),

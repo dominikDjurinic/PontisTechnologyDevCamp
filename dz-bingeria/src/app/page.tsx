@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="w-full flex flex-col items-center justify-center h-screen">
-      <div className="w-full flex flex-col items-center justify-center bg-red-500 gap-10 h-[50%]">
+      <div className="w-full flex flex-col items-center justify-center bg-red-500 dark:bg-gray-800 gap-10 h-[50%]">
         <Image src={"/logo.png"} alt="logo" width={100} height={100} />
         <h1 className="font-bold text-6xl md:text-9xl text-white text-shadow-gray-300 text-shadow-sm">
           Bingeria
@@ -18,7 +18,7 @@ export default function Home() {
           vlastitu listu za gledanje i ocjenjivanje serija kroz recenziju.
         </p>
         <Link href={"/katalog"}>
-          <button className="m-10 px-10 py-5 bg-red-500 hover:bg-red-400 text-white text-2xl font-bold rounded-2xl cursor-pointer flex items-center">
+          <button className="m-10 px-10 py-5 bg-red-500 dark:bg-gray-800 hover:bg-red-400 dark:hover:bg-gray-500 text-white text-2xl font-bold rounded-2xl cursor-pointer flex items-center">
             Ulaz <ChevronRightIcon className="w-10" />
           </button>
         </Link>

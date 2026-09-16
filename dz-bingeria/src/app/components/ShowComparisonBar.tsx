@@ -34,6 +34,9 @@ export default function ShowComparisonBar() {
     <div className="w-full z-100 fixed bottom-0 flex justify-between gap-3 items-center flex-wrap bg-gray-200 dark:bg-gray-800 px-2 py-3 shadow-2xl shadow-gray-300 inset-shadow-sm ">
       <p className="flex items-center gap-3">
         Odabrane serije za usporedbu:
+        <span className="w-fit bg-red-500 dark:bg-black text-white px-2 py-1  rounded-full">
+          {showsToCompare.length}
+        </span>
         <button
           onClick={() => removeAll()}
           className="flex items-center gap-2 w-fit bg-red-500 hover:bg-red-400 dark:bg-black dark:hover:bg-gray-900 text-white p-2 cursor-pointer rounded-2xl"

@@ -1,11 +1,11 @@
 "use client";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { Season, SeasonEpisode } from "../lib/ShowsDataTypes";
 import { getEpisodesBySeason } from "../controllers/show.controllers/getEpisodesBySeason";
 import { setEpisodeWatched } from "../controllers/show.controllers/setEpisodeWatched";
-import { EyeIcon, EyeSlashIcon } from "@heroicons/react/20/solid";
+import { EpisodeItem } from "./EpisodeItem";
 
 type SeasonEpisodeProps = {
   showId: number;
@@ -65,6 +65,13 @@ export default function SeasonsEpisodesContainer({
     },
   });
 
+  const handleToggle = useCallback(
+    (episodeId: number, watched: boolean) => {
+      mutation.mutate({ episodeId, watched });
+    },
+    [mutation.mutate],
+  );
+
   return (
     <div className="w-[95%] md:w-[80%] flex flex-col gap-5 bg-gray-100 dark:bg-gray-800 w-80 rounded-2xl p-12 text-center shadow-xs shadow-gray-300">
       {errorMessage && (
@@ -113,38 +120,7 @@ export default function SeasonsEpisodesContainer({
       {episodes && episodes.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2">
           {episodes.map((ep) => (
-            <div
-              key={ep.id}
-              className="flex items-center justify-between p-3 bg-white dark:bg-gray-500  rounded-2xl"
-            >
-              <div>
-                <span className="text-xs text-red-400 dark:text-black font-bold">
-                  E{ep.number}
-                </span>
-                <h4 className="text-sm font-semibold text-black dark:text-white">
-                  {ep.name}
-                </h4>
-                <span className="text-xs text-gray-500 dark:text-white">
-                  {ep.airdate || "N/A"}
-                </span>
-              </div>
-
-              <button
-                onClick={() =>
-                  mutation.mutate({
-                    episodeId: ep.id,
-                    watched: !ep.watched,
-                  })
-                }
-                className={`m-3 cursor-pointer ${ep.watched ? "text-red-500 dark:text-gray-800" : "text-gray-400 dark:text-white"}`}
-              >
-                {ep.watched ? (
-                  <EyeIcon className="w-5 h-5" />
-                ) : (
-                  <EyeSlashIcon className="w-5 h-5" />
-                )}
-              </button>
-            </div>
+            <EpisodeItem key={ep.id} episode={ep} onToggle={handleToggle} />
           ))}
         </div>
       )}

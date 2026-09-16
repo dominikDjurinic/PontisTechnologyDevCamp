@@ -1,0 +1,24 @@
+prije memo
+
+SeasonEpisodesContainer - 2.5ms (hooks 10 and 16 changed)
+Svih 22 epizode s2 id:2 ukupno - 3 ms (props changed onToggle)
+___________
+5.5 ms ukupno renderiranje
+
+*Primjećujem auto memoizaciju koju provodi react compiler
+
+
+nakon memo
+
+SeasonEpisodesContainer - 2.1ms (hooks 10 and 16 changed)
+Samo jedna epizoda koju smo kliknuli EpisodeItem - 0.2 ms (props changed episode)
+ostale epizode sivo prugasto se nisu re renderirale
+___________
+3 ms ukupno renderiranje
+
+
+
+_______
+
+Promjena teme ne utječe na renderiranje badge usporedbe jer su u mom kodu store za temu i store za usporedbu odvojeni i izravno ne utječu jedan na drugoga.
+Ako bi bili smješteni u isti zustand store onda bi neovisnost pri renderiranju postigli upotrebom selektora.

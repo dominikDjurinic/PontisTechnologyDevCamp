@@ -74,3 +74,8 @@ export type SeasonEpisode = {
   airdate: string;
   watched?: boolean;
 };
+
+export type EpisodeItemProps = {
+  episode: SeasonEpisode;
+  onToggle: (episodeId: number, watched: boolean) => void;
+};

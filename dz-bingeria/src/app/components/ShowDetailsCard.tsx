@@ -7,7 +7,6 @@ import { showExistInList } from "../controllers/list.controllers/showExistInList
 import ListButton from "./ListButton";
 import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-import SeasonsEpisodesContainer from "./SeasonsEpisodeContainer";
 
 export default async function ShowDetailsCard({
   show,

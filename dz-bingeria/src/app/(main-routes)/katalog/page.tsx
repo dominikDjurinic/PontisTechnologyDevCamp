@@ -1,5 +1,4 @@
 import React from "react";
-import { Show } from "../../lib/ShowsDataTypes";
 import { getShowData } from "../../controllers/show.controllers/getShowData";
 import CatalogueCard from "../../components/CatalogueCard";
 import SearchBar from "@/app/components/SearchBar";
@@ -15,8 +14,6 @@ export default async function Catalogue({ searchParams }: Props) {
     getShowData(),
     getListData(), // Vraća npr. Array ili Set pohranjenih ID-eva odjednom
   ]);
-
-  //const shows: Show[] = data?.slice(0, 24);
 
   const filteredShows = data.filter((show) =>
     show.name.toLowerCase().includes(q.toLowerCase().trim()),

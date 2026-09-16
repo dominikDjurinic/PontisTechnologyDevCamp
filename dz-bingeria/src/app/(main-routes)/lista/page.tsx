@@ -72,7 +72,14 @@ export default async function MyListPage({ searchParams }: Props) {
       {shows.length === 0 && <p>Trenutno nema odabranih serija favorita.</p>}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 my-10">
         {sortedShows?.map((show) => {
-          return <CatalogueCard key={show.id} show={show} list={true} />;
+          return (
+            <CatalogueCard
+              key={show.id}
+              show={show}
+              list={true}
+              isSaved={shows.includes(show)}
+            />
+          );
         })}
       </div>
     </div>

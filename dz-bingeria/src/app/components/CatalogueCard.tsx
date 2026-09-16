@@ -1,19 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import { ShowCardProps } from "../lib/ShowsDataTypes";
+
 import { StarIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import ListButton from "./ListButton";
 import CompareButton from "./CompareButton";
+import { ShowCardProps } from "../lib/ShowsDataTypes";
 
-export default function CatalogCard({
-  show,
-  list,
-  isSaved = false,
-}: ShowCardProps) {
+export default function CatalogCard({ show, list, isSaved }: ShowCardProps) {
   return (
     <div className="relative">
-      {list && <ListButton isSaved={isSaved} show={show} />}
+      {list && isSaved != undefined && (
+        <ListButton isSaved={isSaved} show={show} />
+      )}
       <CompareButton id={show.id} />
       <Link
         href={`/serija/${show.id}`}

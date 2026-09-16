@@ -1,7 +1,7 @@
 "use client";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useState } from "react";
 import { Season, SeasonEpisode } from "../lib/ShowsDataTypes";
 import { getEpisodesBySeason } from "../controllers/show.controllers/getEpisodesBySeason";
 import { setEpisodeWatched } from "../controllers/show.controllers/setEpisodeWatched";

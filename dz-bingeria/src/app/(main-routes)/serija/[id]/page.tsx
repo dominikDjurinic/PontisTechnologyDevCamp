@@ -1,6 +1,5 @@
 import ReviewCard from "@/app/components/ReviewCard";
 import SeasonsChartContainer from "@/app/components/SeasonsChartContainer";
-import ReviewChartContainer from "@/app/components/SeasonsChartContainer";
 import SeasonsEpisodesContainer from "@/app/components/SeasonsEpisodeContainer";
 import ShowDetailsCard from "@/app/components/ShowDetailsCard";
 import { getReviewsByShowId } from "@/app/controllers/review.controllers/getReviewsByShowId";

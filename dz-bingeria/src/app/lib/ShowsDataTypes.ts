@@ -25,7 +25,7 @@ export type RawShow = {
 export type ShowCardProps = {
   show: Show;
   list?: boolean;
-  isSaved: boolean;
+  isSaved?: boolean;
 };
 
 export type ShowDetails = {

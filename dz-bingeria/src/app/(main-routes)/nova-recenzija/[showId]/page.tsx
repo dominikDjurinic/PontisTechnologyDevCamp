@@ -1,5 +1,4 @@
 import ReviewForm from "@/app/components/ReviewForm";
-import React from "react";
 
 type Props = {
   params: Promise<{ showId: string }>;

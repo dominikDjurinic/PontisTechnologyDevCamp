@@ -57,6 +57,8 @@ export async function getShowDetailsData(id: string) {
     const episodes: Episode[] = episodes_data.map((ep) => ({
       id: ep.id,
       name: ep.name,
+      season: ep.season,
+      rating: ep.rating,
     }));
 
     const seasons: Season[] = seasons_data.map((s) => ({

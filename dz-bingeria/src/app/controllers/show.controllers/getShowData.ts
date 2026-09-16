@@ -18,7 +18,7 @@ export async function getShowData() {
       name: show.name,
       genres: show.genres,
       rating: show.rating.average,
-      image: show.image?.original,
+      image: show.image?.medium || show.image?.original,
     }));
 
     return shows as Show[];

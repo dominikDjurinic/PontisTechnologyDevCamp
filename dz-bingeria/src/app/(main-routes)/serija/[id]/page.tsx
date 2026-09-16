@@ -1,4 +1,6 @@
 import ReviewCard from "@/app/components/ReviewCard";
+import SeasonsChartContainer from "@/app/components/SeasonsChartContainer";
+import ReviewChartContainer from "@/app/components/SeasonsChartContainer";
 import SeasonsEpisodesContainer from "@/app/components/SeasonsEpisodeContainer";
 import ShowDetailsCard from "@/app/components/ShowDetailsCard";
 import { getReviewsByShowId } from "@/app/controllers/review.controllers/getReviewsByShowId";
@@ -37,6 +39,7 @@ export default async function DetailsPage({ params }: Props) {
         seasons={seasons}
       />
       <SeasonsEpisodesContainer showId={showDetails.id} seasons={seasons} />
+      <SeasonsChartContainer episodes={episodes} seasons={seasons} />
       <h2 className="text-2xl md:text-4xl font-bold my-10">
         Recenzije - {reviews.length}
       </h2>

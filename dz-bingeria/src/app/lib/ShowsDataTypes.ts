@@ -1,3 +1,5 @@
+import { boolean } from "zod";
+
 export type Show = {
   id: number;
   name: string;
@@ -23,6 +25,7 @@ export type RawShow = {
 export type ShowCardProps = {
   show: Show;
   list?: boolean;
+  isSaved: boolean;
 };
 
 export type ShowDetails = {
@@ -53,6 +56,10 @@ export type RawShowDetails = {
 export type Episode = {
   id: number;
   name: string;
+  season: number;
+  rating: {
+    average: number | null;
+  };
 };
 
 export type Season = {
@@ -73,6 +80,9 @@ export type SeasonEpisode = {
   number: number;
   airdate: string;
   watched?: boolean;
+  rating: {
+    average: number | null;
+  };
 };
 
 export type EpisodeItemProps = {

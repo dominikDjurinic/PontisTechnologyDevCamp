@@ -16,7 +16,7 @@ type RatingChartProps = {
   episodes: Episode[];
 };
 
-export function RatingChart({ seasons, episodes }: RatingChartProps) {
+export function SeasonsRatingChart({ seasons, episodes }: RatingChartProps) {
   const chartData = seasons.map((season) => {
     const seasonEpisodes = episodes.filter(
       (ep) =>

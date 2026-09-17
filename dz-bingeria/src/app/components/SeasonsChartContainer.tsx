@@ -6,7 +6,7 @@ import { Episode, Season } from "@/app/lib/ShowsDataTypes";
 const RatingChart = dynamic(
   () =>
     import("@/app/components/SeasonsRatingChart").then(
-      (mod) => mod.RatingChart,
+      (mod) => mod.SeasonsRatingChart,
     ),
   {
     ssr: false,

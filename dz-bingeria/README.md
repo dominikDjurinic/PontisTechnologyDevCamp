@@ -48,6 +48,7 @@ Zadatak je bio izraditi Next.js aplikaciju prema uputama i pravilima u <a href="
 3.  `/serija/[id]`<br/><br/>
     <img src="public/screen/3.png" width="1000px"/><br/><br/>
     <img src="public/screen/4.png" width="1000px"/><br/><br/>
+    <img src="public/screen/7.png" width="1000px"/><br/><br/>
 4.  `/lista`<br/><br/>
     <img src="public/screen/5.png" width="1000px"/><br/><br/>
 5.  `/nova-recenzija/[id]`<br/><br/>

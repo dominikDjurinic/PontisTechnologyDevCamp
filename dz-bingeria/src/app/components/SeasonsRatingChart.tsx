@@ -29,6 +29,7 @@ export function SeasonsRatingChart({ seasons, episodes }: RatingChartProps) {
       (sum, ep) => sum + (ep.rating.average || 0),
       0,
     );
+
     const avgRating =
       seasonEpisodes.length > 0
         ? Number((totalRating / seasonEpisodes.length).toFixed(1))
